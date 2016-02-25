@@ -1,25 +1,25 @@
 ---
-layout: home
+layout: landing
 ---
 
-<main>
+<div class="home">
 
-  <section class="post-list">
+  <ul class="post-list">
     {% for post in site.posts %}
-      <article>
-        <time class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h1>
+        <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h1>
+        </h2>
 
-        <div>
+        <section>
             {{ post.excerpt }}
-        </div>
-      </article>
+        </section>
+      </li>
     {% endfor %}
-  </section> 
+  </ul> 
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</main>
+</div>
