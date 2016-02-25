@@ -10,7 +10,7 @@ title: Christopher Muller
 email: inbox@christophermuller.net
 description: > # this means to ignore newlines until "baseurl:"
   I am a back-end developer with 4 years of experience making websites and web applications.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/sharlos.github.io" # the subpath of your site, e.g. /blog
 url: "http://christophermuller.net" # the base hostname & protocol for your site
 twitter_username: sharlos
 github_username:  sharlos
