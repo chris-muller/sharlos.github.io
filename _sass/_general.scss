@@ -62,14 +62,13 @@ nav {
 }
 
 .site-header {
-    // border-bottom: 2px solid #BBB;
     text-align: center;
     margin-bottom: 60px;
     width: 100%;
+}
 
-    // a.site-title {
-    //     text-decoration: none;
-    // }
+.site-footer {
+    margin-bottom: 32px;
 }
 
 @media (max-width: 799px) {
@@ -92,13 +91,33 @@ nav {
     }
 }
 
+@media (max-width: 540px) {
+
+    .site-sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .about {
+            order: 1;
+        }
+        .contact {
+            order: 2;
+        }
+
+        & > section {
+            
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
+
 .site-sidebar .contact ul {
     @extend %invis-list;
 }
 
-//
 // Icons
-//
 .icon {
 
     > svg {
@@ -112,21 +131,3 @@ nav {
         }
     }
 }
-
-// .wrapper > main {
-//     flex: 2;
-
-//     @media (max-width: 820px) {
-        
-//     }
-
-// }
-
-// .wrapper > aside {
-//     flex: 1;
-
-//     @media (max-width: 820px) {
-        
-//     }
-
-// }
