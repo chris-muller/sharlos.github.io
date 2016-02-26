@@ -6,14 +6,6 @@ body {
     padding-right: 8px;
 }
 
-%style-link {
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
 
 %headings {
     color: #2E2E2E;
@@ -24,6 +16,10 @@ body {
     & > a {
         @extend %style-link;
     }
+}
+
+%headings + p {
+    margin-top: 0;
 }
 
 h1 {
@@ -76,6 +72,29 @@ nav {
     // }
 }
 
+@media (max-width: 799px) {
+
+    .site-sidebar {
+        display: flex;
+        justify-content: space-between;
+
+        & > section {
+            max-width: 400px;
+            padding: 0 32px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.site-sidebar .contact ul {
+    @extend %invis-list;
+}
 
 //
 // Icons
