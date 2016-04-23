@@ -1,0 +1,63 @@
+
+//Project List Page
+//=========================================================
+
+.project-list {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+}
+
+// .projects h2 {
+//     @extend %heading-underline;
+// }
+
+.project {
+    padding: 20px;
+    width: 50%;
+    // border: 1px solid black;
+    float: left;
+    margin-bottom: 50px;
+    
+    img {
+        margin: 0 auto;
+        width: 100%;
+        box-shadow: 0 0 20px #D4D4D4;
+    }
+    
+    .description {
+        color: #999;
+        font-style: italic;
+    }
+    
+    
+}
+
+//Make first elements and last elements full width
+//Last element is only applied if there are an even number of elements
+.project:first-child, .project:nth-child(even):last-child {
+    width: 100%;
+    
+    img {
+        float: left;
+        margin-right: 20px;
+        width: 50%;
+    }
+}
+
+
+//Project Page
+//=========================================================
+.project-page {
+    img { 
+        float: left;
+        margin: 0 15px 15px;
+        box-shadow: 0 0 20px #D4D4D4;
+    }
+    
+    h3 {
+        clear: left;
+    }
+    
+}
+

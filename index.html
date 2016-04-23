@@ -1,20 +1,5 @@
 ---
-layout: default
+layout: homepage
 ---
 
-<section class="post-list">
-{% for post in site.posts %}
-  <article>
-    <h1>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h1>
-    <time class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</time>
-    <div>
-        {{ post.excerpt }}
-    </div>
-  </article>
-{% endfor %}
-</section> 
-
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+{% include projects.html %}

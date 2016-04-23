@@ -1,7 +1,31 @@
-<header class="site-header">
+{% assign class = "" %}
+
+{% if include.short %}
+{% assign class = "short" %}
+{% endif %}
+
+<header class="site-header {{ class }}">
 
     <h1><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
 
-    {% include nav.html %}
+    <ul class="contact-list">
+        {% if site.email %}
+        <li>
+        {% include social-email.html email=site.email %}
+        </li>
+        {% endif %}
+        
+        {% if site.github_username %}
+        <li>
+        {% include social-github.html username=site.github_username %}
+        </li>
+        {% endif %}
+
+        {% if site.twitter_username %}
+        <li>
+        {% include social-twitter.html username=site.twitter_username %}
+        </li>
+        {% endif %}
+    </ul>
 
 </header>

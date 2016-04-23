@@ -1,4 +1,5 @@
 $grey-color: rgb(130, 130, 130);
+$font-family: "Helvetica, arial, nimbussansl, liberationsans";
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -15,11 +16,21 @@ h4, h5, h6 {
 }
 
 
-%style-link {
+%invert-link-hover {
     text-decoration: none;
-    color: inherit;
 
     &:hover {
         text-decoration: underline;
+    }
+}
+
+%heading-underline {
+    &:after {
+        content: "";
+        height: 1px;
+        width: 40%;
+        display: block;
+        margin: 16px auto 0;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0));
     }
 }

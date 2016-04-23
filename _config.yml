@@ -17,3 +17,13 @@ github_username:  sharlos
 
 # Build settings
 markdown: kramdown
+
+
+collections:
+  project:
+    output: true
+  # thoughts:
+  #   output: true
+  # downloads:
+  #   output: true
+
