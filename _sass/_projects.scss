@@ -8,14 +8,8 @@
     float: left;
     margin-bottom: 50px;
     
-    .desc {
-        float: right;
-        width: 50%;
-    }
-    
     .hero {
         display: block;
-        width: 50%;
         
         img {
             width: 100%;
@@ -31,21 +25,44 @@
     a.link {
         @extend %invert-link-hover;
     }
-}
+    
+            
 
-//Make first elements and last elements full width
-//Last element is only applied if there are an even number of elements
-.project:nth-child(odd) {
-    .hero {
-        float: left;
-        padding-right: 60px;
+@media (max-width: 739px) {
+    h3 {
+        text-align: center;
+        margin-top: 15px;
     }
+
+}
+    
 }
 
-.project:nth-child(even) {    
-    .hero {
+@media (min-width: 740px) {
+    
+    .project .desc {
         float: right;
-        padding-left: 60px;
+        width: 50%;
+    }
+    
+    .project .hero {
+        width: 50%;
+    }
+
+    //Make first elements and last elements full width
+    //Last element is only applied if there are an even number of elements
+    .project:nth-child(odd) {
+        .hero {
+            float: left;
+            padding-right: 60px;
+        }
+    }
+
+    .project:nth-child(even) {    
+        .hero {
+            float: right;
+            padding-left: 60px;
+        }
     }
 }
 
@@ -54,9 +71,16 @@
 //=========================================================
 .project-page {
     img {
-        float: right;
-        margin-left: 40px;
         box-shadow: 0 0 20px #D4D4D4;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    @media (min-width: 740px) {
+        img {
+            float: right;
+            margin-left: 40px;
+        }
     }
     
    h2 {
@@ -73,6 +97,8 @@
         font-style: italic;
         font-size: 24px;
     }
+    
+    
 }
 
 img[src$='#neutron-hero'],
@@ -81,14 +107,27 @@ img[src$='#img-wool-footer'] {
     width: 100%;
     margin: 20px 0;
 }
-
 img[src$='#dest-one'] {
-    width: 35%;
-    margin: 0 0 0 20px;
+    width: 100%;
+    margin: 20px 0;
 }
 
+
+
+@media (min-width: 740px) {
+    img[src$='#dest-one'] {
+        width: 35%;
+        margin: 0 0 0 20px;
+    }
+    
 img[src$='#neutron-two']  {
     margin: 0 0 20px 20px;
+}
+    
+    
+}
+img[src$='#neutron-two']  {
+    margin: 20px 0;
 }
 
 img[src$='#dest-two'] {

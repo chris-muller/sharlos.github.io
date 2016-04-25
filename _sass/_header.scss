@@ -6,7 +6,7 @@ $title-padding: "30px";
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 300px;
+    height: 300px;  
     
     h1 {
         a { text-decoration: none; }
@@ -20,6 +20,7 @@ $title-padding: "30px";
         @extend %invis-list;
         border-left: solid 1px $grey-color;
         padding-left: #{$title-padding};
+        width: 140px;
         
         li {
             padding: 2px;
@@ -29,7 +30,46 @@ $title-padding: "30px";
     &.short {
         height: 200px;
     }
+    
+    @media (max-width: 790px) {
+        h1 {
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 570px) {
+   
+        h1 {
+            margin: 0;
+        }
         
+        .contact-list {
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: none;
+        
+            li {
+                display: inline-block;
+                margin: 0 8px;
+                
+            }
+            
+            &:after {
+                content: "";
+                display: block;
+                height: 100%;
+                overflow: hidden;
+            }
+        }
+    }  
+    
+    @media (max-width: 460px) {
+        display: block;
+        height: auto;
+        margin-bottom: 15px;
+    }            
 }
 
 // Icons

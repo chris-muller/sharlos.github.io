@@ -2,55 +2,71 @@
 layout: resume
 ---
 
-### Experience
-{% for job in site.data.experience %}
-<div class="experience">
-    <h4>{{ job.title }}</h4>
-    <h5 class="company">{{ job.company }}</h5>
-    <p class="time">{{ job.time }}</p>
-    <p class="role">{{ job.role }}</p>
-</div>
-{% endfor %}
+### EXPERIENCE
 
-### Skills
-* C#
-* Ms sql/t-sql, MySQL
-* Mvc Asp.net
-* Familiarity with web forms
-* Experience with episerver
-* Entity framework
+#### Mullen Lowe Profero
+.Net developer / June 2015 – April 2016
+
+* Developing and maintaining websites built with C#, MS SQL, JavaScript and PHP
+* Maintenance of existing websites including those built with EPiServer and Umbraco
+* Development of new features and additions to existing projects
+* Contributed to new product ideation and development
+
+#### Mullen Lowe Profero
+Front-end developer / July 2012 – June 2015
+
+* Localisation and maintenance of apple.com website for the Asia-Pacific region
+* Facilitated and supervised training of new Apple Singapore localisation team
+* Regularly travelled to America to work on confidential product launches
+* Managing schedule of large projects for several team members
+* Mentoring and providing technical advice for colleagues 
+* Creation and maintenance of documentation and training materials
+* Regular face-to-face contact and project planning with clients
+
+#### 1 Stop Property Reports
+Full stack web developer / October 2011 – February 2012
+
+* Development of a number of websites for several small businesses
+* Creation of user documentation for client use
+
+### SKILLS SUMMARY
+
+* C#/ASP.NET MVC
+* MS-SQL/T-SQL, MySQL
+* EPiServer
+* Umbraco
+* Entity Framework
 * Dapper
 * Razor
-* Experience with database design
-* Umbraco 
-* HTML5 /CSS 
-* Experience with CSS frameworks including bootstrap 
-* Intermediate JavaScript knowledge
-* Jquery
-* Ajax
-* Xml/json 
-* Npm/bower/gulp
-* Extensive experience with Sass
-* Beginner experience with swift and uikit
-* Git 
-* Svn
-* Php including familiarity with laravel
-* Experience managing Linux Ubuntu and centos servers
-* Experience supervising a team of developers
-* Experience maintaining technical and training documentation
-* Experience training new employees in technical role and business processes 
-* Experience managing schedule of team mates and projects
-* Experience communicating directly with clients to manage project deliverables and timelines 
-* Experience taking completed designs and creating high fidelity layouts in html/CSS 
-* Experience integrating static html assets with backed code
-* Familiarity with agile methodology 
-* Experience with unit testing and test driven development
-* Experience with object oriented programming 
-* Visual studio 2013 and 2015
-* Experience creating and working with rest apis 
-* Extensive experience with responsive design
+* HTML/HTML5
+* CSS/CSS3 and Sass
+* JavaScript/JQuery
+* XML/JSON
+* NPM/Gulp
+* Git/SVN 
+* PHP  and Laravel
 
-### Education
-Diploma of Web development 
+#### General Skills
+* Developed Sass/CSS framework for managing layouts
+* Used Swift and UIKit to develop an iPhone application
+* Managing Linux Ubuntu and CentOS servers
+* Supervising a team of developers
+* Maintaining technical and training documentation
+* Taking completed designs and creating high fidelity layouts in HTML/CSS 
+* Integrating static HTML assets with back-end code
+* Unit testing and test driven development
+* Object oriented programming (OOP)
+* Creating and working with REST APIs 
+* Responsive design
 
-Cert 2 information technology 
+### CERTIFICATIONS
+
+#### Diploma of Website Development
+TAFE NSW
+
+#### Certificate IV in Web Design
+TAFE NSW
+
+#### Certificate III in Customer Contact
+Australian College of Commerce & Management, Datacom Connect
+

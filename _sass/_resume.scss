@@ -1,0 +1,17 @@
+
+.resume {
+    // display: flex;
+    
+    // & > * {
+    //     flex-direction: column;
+    // }
+    clear: left;
+    
+    %headings {
+        margin-bottom: 0;
+    }
+    
+    #skills-summary + ul {
+        --webkit-columns: 2;
+    }
+}
