@@ -2,46 +2,50 @@
 //Project List Page
 //=========================================================
 
-.project-list {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-}
-
-// .projects h2 {
-//     @extend %heading-underline;
-// }
-
 .project {
     padding: 20px;
-    width: 50%;
-    // border: 1px solid black;
+    width: 100%;
     float: left;
     margin-bottom: 50px;
     
-    img {
-        margin: 0 auto;
-        width: 100%;
-        box-shadow: 0 0 20px #D4D4D4;
+    .desc {
+        float: right;
+        width: 50%;
     }
     
-    .description {
+    .hero {
+        display: block;
+        width: 50%;
+        
+        img {
+            width: 100%;
+            box-shadow: 0 0 20px #D4D4D4;
+        }
+    }
+    
+    .byline {
         color: #999;
         font-style: italic;
     }
     
-    
+    a.link {
+        @extend %invert-link-hover;
+    }
 }
 
 //Make first elements and last elements full width
 //Last element is only applied if there are an even number of elements
-.project:first-child, .project:nth-child(even):last-child {
-    width: 100%;
-    
-    img {
+.project:nth-child(odd) {
+    .hero {
         float: left;
-        margin-right: 20px;
-        width: 50%;
+        padding-right: 60px;
+    }
+}
+
+.project:nth-child(even) {    
+    .hero {
+        float: right;
+        padding-left: 60px;
     }
 }
 
@@ -49,15 +53,46 @@
 //Project Page
 //=========================================================
 .project-page {
-    img { 
-        float: left;
-        margin: 0 15px 15px;
+    img {
+        float: right;
+        margin-left: 40px;
         box-shadow: 0 0 20px #D4D4D4;
     }
     
+   h2 {
+       margin-bottom: 0;
+   }
+    
     h3 {
         clear: left;
+        margin-top: 30px;
     }
     
+    .description {
+        color: #999;
+        font-style: italic;
+        font-size: 24px;
+    }
+}
+
+img[src$='#neutron-hero'],
+img[src$='#img-wool-hero'],
+img[src$='#img-wool-footer'] {
+    width: 100%;
+    margin: 20px 0;
+}
+
+img[src$='#dest-one'] {
+    width: 35%;
+    margin: 0 0 0 20px;
+}
+
+img[src$='#neutron-two']  {
+    margin: 0 0 20px 20px;
+}
+
+img[src$='#dest-two'] {
+    width: 100%;
+    margin: 20px 0;
 }
 

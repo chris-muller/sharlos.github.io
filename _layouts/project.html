@@ -4,6 +4,7 @@ layout: default
 
 <section class="project-page">
     <h2>{{ page.title }}</h2>
-    <img src="{{ page.image | prepend: site.baseurl }}" alt="">
+    <a class="link" href="{{ page.link }}">{{ page.link }}</a>
+    <p class="description">{{ page.description }}</p>
     {{ content }}
 </section>

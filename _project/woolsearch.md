@@ -1,36 +1,35 @@
 ---
 layout: project
-title:  "Wool search"
-description: "Short description here Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-link: "http://www.example.com/"
+title:  "Wool Search"
+description: "An industry directory for products and services provided by wool suppliers."
+link: "http://www.woolmark.com/resources/wool-search"
 order: 100
-exclude: false
-image: /img/woolsearch.png
+image: /img/woolsearch-thumb.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
+![]({{site.baseurl}}/img/woolsearch-1.png#img-wool-hero)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
+Wool Search was a new section of the existing woolmark.com website, created to allow the user to search and filter wool suppliers based on the products and services they provide.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
+The data for Wool Search came from a pre-existing SalesForce data store and synced to an independent SQL database using a Cloud Sherpas service.
 
-### Project
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
+![]({{site.baseurl}}/img/woolsearch-2.png)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
+### Process and Contribution
+My responsibilities during the course of the project included:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
-
-### Contribution
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
+* Integrating the static HTML assets into the project as Razor views.
+* Implementing REST API for use by the Angular frontend.
+* Updating Dapper SQL queries and object mapping with to conform to changing database schema and requirements during the course of the project.
+* Transforming provided business data into a usable format and structure for use in the project.
+*  Building unit tests for core components of business logic.
+* Connecting project into existing website EPiServer code.
+* Indexed supplier data using EPiServer Find.
 
 ### Technology Used
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore alias illo magnam tempore nobis autem aperiam doloribus, natus sunt molestiae ducimus consectetur, sint veritatis officiis quae excepturi, perferendis nihil!
+* ASP.NET web application used to run an EPiServer website.
+* Dapper used as an ORM for SQL queries to an MSSQL database.
+* Tickets, project status and deployment managed using Jira and Bamboo.
+* Git used as the version control tool.
+  
+![]({{site.baseurl}}/img/woolsearch-3.png#img-wool-footer)
