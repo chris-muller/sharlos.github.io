@@ -11,9 +11,7 @@ $title-padding: "30px";
     h1 {
         a { text-decoration: none; }
         
-        text-align: right;
         margin: 0 #{$title-padding} 0 0;
-        
     }
     
     .contact-list {
@@ -29,12 +27,6 @@ $title-padding: "30px";
     
     &.short {
         height: 200px;
-    }
-    
-    @media (max-width: 790px) {
-        h1 {
-            text-align: center;
-        }
     }
     
     @media (max-width: 580px) {
