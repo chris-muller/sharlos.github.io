@@ -65,6 +65,8 @@ $title-padding: "30px";
         }
     }  
     
+          
+    
     @media (max-width: 460px) {
         display: block;
         height: auto;
@@ -83,7 +85,12 @@ $title-padding: "30px";
     height: 16px;
     vertical-align: middle;
     margin-right: 4px;
-}
+    
+        @media (max-width: 520px) {
+            display: block;
+            margin: 0 auto;
+        }  
+    }
 
 .social-link { 
     text-decoration: none; 
