@@ -37,10 +37,15 @@ $title-padding: "30px";
         }
     }
     
-    @media (max-width: 570px) {
-   
+    @media (max-width: 580px) {
+        display: block;
+        height: auto;
+        margin-bottom: 15px;
+
         h1 {
-            margin: 0;
+            margin: 0 auto;
+            max-width: 520px;
+            font-size: 60px;
         }
         
         .contact-list {
@@ -63,18 +68,6 @@ $title-padding: "30px";
                 overflow: hidden;
             }
         }
-    }  
-    
-          
-    
-    @media (max-width: 460px) {
-        display: block;
-        height: auto;
-        margin-bottom: 15px;
-        
-        h1 {
-            font-size: 60px;
-        }
     }            
 }
 
@@ -86,7 +79,7 @@ $title-padding: "30px";
     vertical-align: middle;
     margin-right: 4px;
     
-        @media (max-width: 520px) {
+        @media (max-width: 580px) {
             display: block;
             margin: 0 auto;
         }  
