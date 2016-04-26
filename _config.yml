@@ -2,7 +2,6 @@
 title: Christopher Muller
 email: inbox@christophermuller.net
 description: "Website and portfolio of Christopher Muller, a web developer focusing on C# and ASP.NET."
-baseurl: "/sharlos.github.io" # the subpath of your site, e.g. /blog
 url: "http://christophermuller.net" # the base hostname & protocol for your site
 twitter_username: sharlos
 github_username:  sharlos
