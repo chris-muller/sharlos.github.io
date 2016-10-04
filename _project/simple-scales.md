@@ -16,7 +16,7 @@ In addition to saving your mass to HealthKit, Simple Scales also uses your heigh
 ### Process and Contribution
 With recent changes to the user interface of HealthKit, it became obvious how inconvenient adding your weight to HealthKit was if you weren't using a smart scale, especially if you were tracking your weight daily.
 
-After brainstorming with an experiance designer to figure out the ideal input method for updating a single number that didn't significantly change in value, the scale slider was settled on. It allows the user to update their weight with the most recent incremental change.
+After brainstorming with an experience designer to figure out the ideal input method for updating a single number that didn't significantly change in value, the scale slider was settled on. It allows the user to update their weight with the most recent incremental change.
 The current mass displayed to the user is also updated as the user scrolls, providing realtime feedback to the user. To give the input greater physicality the new haptics API was used to gently vibrate the phone as the user scrolled through the scale, or when a weight value is saved.
 
 Native HealthKit unit transformation was used to localise the input and saved data for the user no matter what region they were from.
