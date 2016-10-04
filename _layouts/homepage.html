@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
+---
+layout: master
+---
 
-  {% include head.html %}
+{% include header.html %}
 
-  <body>
+<div class="wrapper">
+    <main>
+        {{ content }}
+    </main>
 
-    {% include header.html %}
-
-    <div class="wrapper">
-        <main>
-            {{ content }}
-        </main>
-
-    </div>
-        {% include footer.html %}
-  </body>
-
-</html>
+</div>
+{% include footer.html %}
