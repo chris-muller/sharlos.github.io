@@ -13,6 +13,7 @@
 // =====================================================================
 // Breakpoints
 // =====================================================================
+$xs: 450px;
 $mobile: 700px;
 $tablet: 900px;
 
@@ -22,6 +23,8 @@ $tablet: 900px;
 $primary: #EC3B33;
 $background: #252323;
 $secondary: #948D8D;
+$copy: #F6F6F6;
+
 
 // =====================================================================
 // Typography
@@ -37,15 +40,24 @@ html {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .h1 {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-family: 'Roboto Condensed', sans-serif;
+
+    @media (min-width: $xs) {
+        font-size: 3rem;
+    }
+
+    @media (min-width: $mobile) {
+        font-size: 5rem;
+    }
 }
 
 .h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .h3 {
@@ -61,10 +73,49 @@ p {
 }
 
 // =====================================================================
-// Layout
+// Global Layout
 // =====================================================================
 html {
     background: $background;
+}
+
+.site-header {
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    position: absolute;
+    height: 50px;
+}
+
+.site-title {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: $secondary;
+    text-transform: uppercase;
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.btn {
+    display: block;
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+
+    color: $copy;
+    background: $primary;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 1rem auto;
+
+    font-weight: lighter;
+    font-size: 0.8rem;
 }
 
 
@@ -90,60 +141,114 @@ html {
         flex-direction: row;
     }
     
-    // @media (min-width: $tablet) {
-        //     flex-direction: row;
-        // }
-    }
     
-    .project {
-        max-width: 15rem;
-        margin: 3rem;
-        text-decoration: none;
-        
-        img {
-            width: 100%;
-            max-height: 180px;
-        }
-        
-        .project-logo {
-            width: 100%;
-            height: 180px;
-            background-repeat: no-repeat;
-            background-size: 180px;
-            background-position: center;
-            transition: background-image 0.2s ease-in-out;
+}
 
-        }
-        
-        h2 {
-            text-align: center;
-        }
-        
-        p {
-            text-align: center;
-            color: $secondary;
-        }
-    }
+.project {
+    max-width: 15rem;
+    margin: 3rem;
+    text-decoration: none;
     
-    .project-logo.awardstack {
-        background-image: url("/img/awardstack.svg");
-    }
-    .project:hover .project-logo.awardstack {
-        background-image: url("/img/awardstack_hover.svg");
-    }
-    
-    .project-logo.simple-scales {
-        background-image: url("/img/simple-scales.svg");
-    }
-    .project:hover .project-logo.simple-scales {
-        background-image: url("/img/simple-scales_hover.svg");
-    }
-    
-    .project-logo.neutron {
-        background-image: url("/img/neutron.svg");
-    }
-    .project:hover .project-logo.neutron {
-        background-image: url("/img/neutron_hover.svg");
+    img {
+        width: 100%;
+        max-height: 180px;
     }
     
     
+    h2 {
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+        color: $secondary;
+    }
+}
+
+
+
+.project-logo {
+    width: 100%;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-size: 180px;
+    background-position: center;
+    transition: background-image 0.2s ease-in-out;
+    
+}
+
+.project-logo.awardstack {
+    background-image: url("/img/awardstack.svg");
+}
+.project:hover .project-logo.awardstack {
+    background-image: url("/img/awardstack_hover.svg");
+}
+
+.project-logo.simple-scales {
+    background-image: url("/img/simple-scales.svg");
+}
+.project:hover .project-logo.simple-scales {
+    background-image: url("/img/simple-scales_hover.svg");
+}
+
+.project-logo.neutron {
+    background-image: url("/img/neutron.svg");
+}
+.project:hover .project-logo.neutron {
+    background-image: url("/img/neutron_hover.svg");
+}
+
+
+
+// =====================================================================
+// Project Page
+// =====================================================================
+
+.intro {
+    // height: calc(250px + 20vh);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    padding: calc(50px + 1rem) 1rem 1rem;
+}
+
+.intro p {
+    color: $copy;
+}
+
+.intro img {
+    height: 7rem;
+
+    @media (min-height: 800px) {
+        height: 10rem;
+    }
+}
+
+
+
+main.project-page .intro {
+    background-position: top center;
+    background-size: 100% 100%;
+}
+
+.content {
+    max-width: 920px;
+    margin: 3rem auto;
+}
+
+.content > section {
+    margin-bottom: 3rem;
+}
+
+
+// =====================================================================
+// Awardstack
+// =====================================================================
+
+main.project-page.awardstack .intro {
+
+    background-image: url("/img/awardstack_intro.png");
+}
