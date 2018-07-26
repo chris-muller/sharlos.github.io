@@ -118,6 +118,10 @@ p + p {
     margin-top:1rem;
 }
 
+a {
+    transition: color 0.25s ease;
+}
+
 // =====================================================================
 // Global Layout
 // =====================================================================
@@ -153,7 +157,6 @@ html {
     line-height: 14px;
     font-weight: lighter;
     letter-spacing: 1px;
-    color: $secondary;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -166,7 +169,11 @@ html {
     
     a {
         text-decoration: none;
-        color: inherit;
+        color: $secondary;
+
+        &:hover {
+            color: $primary;
+        }
     }    
 }
 
@@ -251,7 +258,7 @@ figcaption {
     font-size: 0;
     color: transparent; 
     
-    transition: background-image 0.2s ease;
+    transition: background-image 0.5s ease;
 }
 
 .social-link.github {
