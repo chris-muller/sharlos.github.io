@@ -107,10 +107,15 @@ body {
     height: 100%;
 }
 
-.site-header {
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.frame-element {
     background: rgba(0,0,0,0.2);
     width: 100%;
-    position: absolute;
     height: 28px;
     display: flex;
     
@@ -118,6 +123,15 @@ body {
         height: 50px;
     }    
     
+}
+
+.site-header {
+    position: absolute;
+    top: 0;
+}
+
+.home-footer {
+    margin-top: auto;
 }
 
 .site-title {
@@ -302,6 +316,10 @@ body.neutron .site-footer .project-logo.neutron {
     color: $secondary;
 }
 
+body.home {
+    background: url("/img/home_bg.png");
+    background-size: cover;
+  }
 
 
 // =====================================================================
