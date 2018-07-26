@@ -1,0 +1,47 @@
+---
+layout: project
+class: neutron
+title: Neutron
+---
+
+<section class="intro">
+    <img src="/img/neutron/icon_color.svg" height="180">
+    <h2 class="h2">Neutron</h2>
+    <p>A Sass framework that empowers you to create flexible, clear, and semantic website layouts.</p>    
+    <a class="btn" href="http://neutroncss.com/">Visit</a>
+</section>
+<div class="content">
+    
+    <section>
+        <h2 class="h2">Problem</h2>
+        <p>I created Neutron after using Bootstrap and finding that it was essentially putting styling in the markup instead of in the stylesheet. Created as an open source proof-of-concept of what a modern layout framework would look like Neutron distilled what the core information a framework needs to provide simple to use layout tools.</p>
+    </section>
+    
+    <section>
+        <h2 class="h2">Process</h2>
+        
+        <p>Neutron was begun by breaking the idea of layout frameworks into their basic components: containers. Commonly used container and row classes in bootstrap led to redundant code in the markup, Neutron instead consolidated them into a single mixin.</p>
+        <p>The framework was created without an arbitrary limitation of 12 columns, allowing the user to use any number of columns that their layout requires. In addition to removing column limitations I was able to discard offset classes and other workarounds that tried to compensate for not being able to use margins in bootstrap and similar frameworks, enabling the user to use margins in their layout as one would expect with normal CSS.</p>
+        <p>In addition to matching existing functionality, I added a Sass version of the flexbox ‘order’ property. This allowed users to change the order of elements on the page without changing the order of the elements in the markup.</p>
+        
+        <figure class="rounded-figure">
+            <img src="/img/neutron/process.png" alt="">
+            <figcaption>Demonstration of the easy-to-use syntax for setting columns.</figcaption>
+        </figure>
+    </section>
+    
+    <section>
+        <h2 class="h2">Technology</h2>
+        
+        <p>Neutron was built using the latest version of Sass, creating a number of mixins and functions that created a complete layout framework engine output in CSS.</p>
+        <p>The framework is hosted on GitHub which is used for version control, issue management, and easy access to the web development community.</p>
+        <p>The Neutron documentation site was built as a static HTML and CSS website using NPM, Gulp, and Git to help manage build and deployment of the project.</p>
+        <p>The site is hosted on its own Ubuntu VPS using Apache with Node.js behind a proxy used to automatically deploy changes made to the master branch on GitHub.</p>
+        
+        <figure class="rounded-figure">
+                <img src="/img/neutron/technology.png" alt="">
+                <figcaption>Explanation of the customisations that can easily be applied.</figcaption>
+        </figure>
+    </section>
+    
+</div>

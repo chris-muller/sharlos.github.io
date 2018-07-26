@@ -1,6 +1,0 @@
-{% for p in include.collection %}
-    {% if p.title == include.item %}
-<a href="{{ site.url/p.url }}">{{ p.title }}<a>
-<p>{{ p.content }}</p>
-    {% endif %}
-{% endfor %}

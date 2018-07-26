@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="354px" height="336px" viewBox="0 0 354 336" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M25,0 L293,6.39488462e-14 C306.807119,3.68861498e-14 318,11.1928813 318,25 C318,38.8071187 306.807119,50 293,50 L25,50 C11.1928813,50 1.69088438e-15,38.8071187 0,25 C-1.69088438e-15,11.1928813 11.1928813,6.08904025e-15 25,3.55271368e-15 Z M66.8421053,83.3333333 L251.157895,83.3333333 C264.965013,83.3333333 276.157895,94.5262146 276.157895,108.333333 C276.157895,122.140452 264.965013,133.333333 251.157895,133.333333 L66.8421053,133.333333 C53.0349865,133.333333 41.8421053,122.140452 41.8421053,108.333333 C41.8421053,94.5262146 53.0349865,83.3333333 66.8421053,83.3333333 Z M125.421053,166.666667 L192.578947,166.666667 C206.386066,166.666667 217.578947,177.859548 217.578947,191.666667 C217.578947,205.473785 206.386066,216.666667 192.578947,216.666667 L125.421053,216.666667 C111.613934,216.666667 100.421053,205.473785 100.421053,191.666667 C100.421053,177.859548 111.613934,166.666667 125.421053,166.666667 Z M108.684211,250 L209.315789,250 C223.122908,250 234.315789,261.192881 234.315789,275 C234.315789,288.807119 223.122908,300 209.315789,300 L108.684211,300 C94.8770918,300 83.6842105,288.807119 83.6842105,275 C83.6842105,261.192881 94.8770918,250 108.684211,250 Z" id="path-1"></path>
+        <filter x="-10.7%" y="-6.7%" width="121.4%" height="122.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="14" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.17 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo/Awardstack/Normal" transform="translate(18.000000, 4.000000)">
+            <g id="Combined-Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#939393" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

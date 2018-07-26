@@ -1,10 +1,8 @@
 # Site settings
 title: Christopher Muller
 email: inbox@christophermuller.net
-description: "Website and portfolio of Christopher Muller, developer skilled in Swift, iOS, .Net, C#, and ASP.NET."
+description: "Website and portfolio of Christopher Muller, developer skilled in .Net, C#, ASP.NET, Swift, and iOS."
 url: "http://christophermuller.net" # the base hostname & protocol for your site
-twitter_username: sharlos
-github_username:  sharlos
 
 # Build settings
 markdown: kramdown
