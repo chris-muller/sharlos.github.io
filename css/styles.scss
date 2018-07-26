@@ -343,14 +343,12 @@ html.neutron .site-footer .project-logo.neutron {
 
 html.home {
     background: $background;
-    background: url("/img/home_bg.png"), $background;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
     
     @media (min-width: $mobile) {
-        background-attachment: scroll;
+        background: url("/img/home_bg.png"), $background;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
     }    
 }
 
@@ -390,11 +388,6 @@ html.home {
     }
 }
 
-main.project-page .intro {
-    background-position: top center;
-    background-size: 100% 100%;
-}
-
 .content {
     max-width: calc(500px + 30vw);
     margin: 3rem auto;
@@ -417,12 +410,24 @@ main.project-page .intro {
 
 // Awardstack
 html.awardstack .project-page .intro {
-    background-image: url("/img/awardstack/intro.png");
+    background: rgb(42,	32,	50);
+
+    @media (min-width: $mobile) {
+        background-image: url("/img/awardstack/intro.png");
+        background-position: top center;
+        background-size: 100% 100%;    
+    }
 }
 
 // Simple Scales
 html.simple-scales .project-page .intro {
-    background-image: url("/img/simple-scales/intro.png");
+    background: rgb(31,	31,	30);
+
+    @media (min-width: $mobile) {
+        background-image: url("/img/simple-scales/intro.png");
+        background-position: top center;
+        background-size: 100% 100%;
+    }
 }
 
 .content > .column-figure {
@@ -437,5 +442,11 @@ html.simple-scales .project-page .intro {
 
 // Neutron
 html.neutron .project-page .intro {
-    background-image: url("/img/neutron/intro.png");
+    background: rgb(38,	40,	46);
+
+    @media (min-width: $mobile) {
+        background-image: url("/img/neutron/intro.png");
+        background-position: top center;
+        background-size: 100% 100%;    
+    }
 }
