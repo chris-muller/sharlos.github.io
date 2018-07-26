@@ -25,27 +25,6 @@ $dark-shadow: 0px 2px 14px rgba(0,0,0,0.5);
 $header-height: 50px;
 
 
-
-// =====================================================================
-// Utilities
-// =====================================================================
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.hide-xs {
-    @media (max-width: $xs - 1) {
-        display: none;
-    }
-}
-
-.show-xs {
-    @media (min-width: $xs) {
-        display: none;
-    }
-}
-
 // =====================================================================
 // Typography
 // =====================================================================
@@ -518,5 +497,47 @@ html.resume {
     .view-portfolio {
         display: inline-block;
         margin-top: 1rem;
+    }
+
+    @media print {
+        background: #FFF;
+        color: #000;
+
+        .view-portfolio {
+            display: none;
+        }
+
+        main > * {
+            margin: 0.25cm 0;
+            padding: 0.25cm;
+        }
+        
+    }
+
+}
+
+// =====================================================================
+// Utilities
+// =====================================================================
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hide-xs {
+    @media (max-width: $xs - 1) {
+        display: none !important;
+    }
+}
+
+.show-xs {
+    @media (min-width: $xs) {
+        display: none !important;
+    }
+}
+
+.show-print {
+    @media screen, aural, braille, embossed, handheld, projection, tty, tv {
+        display: none !important;
     }
 }
