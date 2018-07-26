@@ -494,6 +494,10 @@ html.resume {
         padding-bottom: 3rem;
     }
 
+    header > strong {
+        display: block;
+    }
+
     main > * {
         margin: 1rem 0;
         padding: 1rem;
@@ -512,15 +516,7 @@ html.resume {
     }
 
     .view-portfolio {
-        margin: 1rem;
-
-        @media (min-width: $mobile) {
-            margin: 1rem 5rem;
-        }
-
-        @media (min-width: $tablet) {
-            margin: 1rem 25vw;
-        }
-        
+        display: inline-block;
+        margin-top: 1rem;
     }
 }
