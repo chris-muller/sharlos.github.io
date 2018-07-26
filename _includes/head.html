@@ -19,5 +19,9 @@
   <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+  {% if page.class == "resume" %}
+  <meta name="robots" content="noindex, nofollow, nosnippet">
+  {% endif %}
+
   {% include prefetch.html %}
 </head>

@@ -52,7 +52,8 @@ $header-height: 50px;
 html {
     font-size: calc(15px + 0.5vw);
     line-height: 1.4;
-    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;    
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;   
+    color: $copy; 
 }
 
 
@@ -481,5 +482,45 @@ html.neutron .project-page .intro {
         background-image: url("/img/neutron/intro.png");
         background-position: top center;
         background-size: 100% 100%;    
+    }
+}
+
+// =====================================================================
+// Resume
+// =====================================================================
+
+html.resume {
+    body {
+        padding-bottom: 3rem;
+    }
+
+    main > * {
+        margin: 1rem 0;
+        padding: 1rem;
+
+        @media (min-width: $mobile) {
+            padding: 1rem 5rem;
+        }
+
+        @media (min-width: $tablet) {
+            padding: 1rem 25vw;
+        }
+    }
+
+    main > section:nth-child(even) {
+        background: rgba(105,105,105,0.2)
+    }
+
+    .view-portfolio {
+        margin: 1rem;
+
+        @media (min-width: $mobile) {
+            margin: 1rem 5rem;
+        }
+
+        @media (min-width: $tablet) {
+            margin: 1rem 25vw;
+        }
+        
     }
 }
