@@ -1,31 +1,28 @@
-{% assign class = "" %}
-
-{% if include.short %}
-{% assign class = "short" %}
-{% endif %}
-
 <header class="site-header {{ class }}">
-
-    <h1 class="site-title"><a href="{{ site.baseurl }}/">Christopher Muller</a></h1>
-
+    
+    <a class="logo" href="{{ site.baseurl }}/"><img src="/img/logo.svg" alt=""></a>
+    <h1 class="site-title">
+        <a href="{{ site.baseurl }}/">Christopher Muller</a>
+    </h1>
+    
     <!-- <ul class="contact-list">
         {% if site.email %}
         <li>
-        {% include social-email.html email=site.email %}
+            {% include social-email.html email=site.email %}
         </li>
         {% endif %}
         
         {% if site.github_username %}
         <li>
-        {% include social-github.html username=site.github_username %}
+            {% include social-github.html username=site.github_username %}
         </li>
         {% endif %}
-
+        
         {% if site.twitter_username %}
         <li>
-        {% include social-twitter.html username=site.twitter_username %}
+            {% include social-twitter.html username=site.twitter_username %}
         </li>
         {% endif %}
     </ul> -->
-
+    
 </header>

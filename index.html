@@ -2,28 +2,9 @@
 layout: homepage
 ---
 
-<header>
+<header class="home-header">
     <h1 class="h1 site-heading">Christopher Muller</h1>
+    <p>Developing websites and applications with C#, .Net, JavaScript, and Swift</p>
 </header>
 
-<section class="projects">
-    <a href="/awardstack" class="project">
-        <div class="project-logo awardstack"></div>
-        <h2 class="h2">Awardstack</h2>
-        <p>Built from the ground up to host, manage, and judge events and competitions.</p>
-    </a>
-    <a href="/simple-scales" class="project">
-        <div class="project-logo simple-scales"></div>
-        <h2 class="h2">Simple Scales</h2>
-        <p>A simple way to update your weight using the native HealthKit API.</p>
-    </a>
-    <a href="/neutron" class="project">
-        <div class="project-logo neutron"></div>
-        <h2 class="h2">Neutron</h2>
-        <p>A Sass framework created for making flexible, clear, and semantic layouts.</p>
-    </a>
-</section>
-
-<footer>
-    
-</footer>
+{% include projects.html %}

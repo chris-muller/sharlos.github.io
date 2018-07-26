@@ -2,36 +2,44 @@
 ---
 
 @import "normalize";
-// @import "variables";
-// @import "general";
-// @import "header";
-// @import "projects";
-// @import "resume";
-
-
 
 // =====================================================================
+// Variables
+// =====================================================================
+
 // Breakpoints
-// =====================================================================
 $xs: 450px;
 $mobile: 700px;
 $tablet: 900px;
 
-// =====================================================================
 // Colors
-// =====================================================================
 $primary: #EC3B33;
 $background: #252323;
 $secondary: #948D8D;
 $copy: #F6F6F6;
+
+// Shadows & Gradients
+$dark-shadow: 0px 2px 14px rgba(0,0,0,0.5);
+
+// Layout
+$header-height: 50px;
+
 
 
 // =====================================================================
 // Typography
 // =====================================================================
 html {
-    font-size: 16px;
-    font-size: calc(10px + 0.5vh + 0.5vw);
+    font-size: calc(6px + 1vw);
+    line-height: 1.4;
+    
+    @media (min-width: 300px) {
+        font-size: calc(10px + 0.5vh + 0.5vw);
+    }
+
+
+
+    
 }
 
 
@@ -39,18 +47,19 @@ html {
     color: $primary;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
-    margin: 0;
+    margin: 0.5rem 0;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .h1 {
     font-size: 2.5rem;
     font-family: 'Roboto Condensed', sans-serif;
-
+    
     @media (min-width: $xs) {
         font-size: 3rem;
     }
-
+    
     @media (min-width: $mobile) {
         font-size: 5rem;
     }
@@ -61,11 +70,19 @@ html {
 }
 
 .h3 {
-    font-size: 2.5rem;
+    font-size: 1.25rem;
 }
 
 .h4 {
-    font-size: 2rem;
+    font-size: 1.25rem;
+    text-transform: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.h5 {
+    font-size: 1rem;
+    text-transform: none;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 p {
@@ -77,57 +94,115 @@ p {
 // =====================================================================
 html {
     background: $background;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .site-header {
     background: rgba(0,0,0,0.2);
     width: 100%;
     position: absolute;
-    height: 50px;
+    height: 28px;
+    display: flex;
+    
+    @media (min-width: $mobile) {
+        height: 50px;
+    }    
+    
 }
 
 .site-title {
-    font-size: 0.8rem;
-    line-height: 1rem;
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 6px 2px;
+    font-size: 14px;
+    line-height: 14px;
     font-weight: lighter;
     letter-spacing: 1px;
     color: $secondary;
     text-transform: uppercase;
     
+    
+    @media (min-width: $mobile) {
+        padding: 15px 2px;
+        font-size: 20px;
+        line-height: 20px;
+    }    
+    
     a {
         text-decoration: none;
         color: inherit;
     }
+    
+    @media (max-width: 240px) {
+        display: none;
+    }    
+    
 }
 
-.btn {
+.logo {
     display: block;
+    padding: 4px;
+    height: 100%;
+    box-sizing: border-box;
+
+    @media (min-width: $mobile) {
+        padding: 12px;
+    }    
+
+
+}
+
+.logo img {
+    height: 100%;
+}
+
+
+.btn {
     padding: 0.25rem 1rem;
     border-radius: 1rem;
-
+    
     color: $copy;
     background: $primary;
-
+    
     text-transform: uppercase;
     text-decoration: none;
     margin: 1rem auto;
-
+    
     font-weight: lighter;
     font-size: 0.8rem;
 }
 
+figure {
+    margin: 2rem 0;
+}
+figure > *:not(figcaption) {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: $dark-shadow;
+}
 
+figcaption {
+    color: $secondary;
+    font-size: 0.75rem;
+    text-align:center;
+}
 
-// =====================================================================
-// Home
-// =====================================================================
-.site-heading {
-    margin: 3rem;
+.site-footer {
+    background: rgba(0,0,0,0.2);
+    padding: 2rem;
+    margin-top: auto;
     text-align: center;
 }
 
+
+// =====================================================================
+// Projects
+// =====================================================================
 .projects {
     display: flex;
     align-items: center;
@@ -201,27 +276,47 @@ html {
 
 
 // =====================================================================
+// Home
+// =====================================================================
+.home-header {
+    margin: 3rem;
+    text-align: center;
+}
+
+.home-header p {
+    color: $secondary;
+}
+
+
+
+// =====================================================================
 // Project Page
 // =====================================================================
 
 .intro {
-    // height: calc(250px + 20vh);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
-    padding: calc(50px + 1rem) 1rem 1rem;
+    
+    padding: calc(28px + 1rem) 1rem 1rem;
+    
+    @media (min-width: $mobile) {
+        padding: calc(50px + 1rem) 1rem 1rem;
+    }    
+    
 }
 
 .intro p {
     color: $copy;
+    max-width: calc(300px + 30vw);
+    margin: auto;
 }
 
 .intro img {
     height: 7rem;
-
+    
     @media (min-height: 800px) {
         height: 10rem;
     }
@@ -235,20 +330,36 @@ main.project-page .intro {
 }
 
 .content {
-    max-width: 920px;
+    max-width: calc(300px + 30vw);
     margin: 3rem auto;
+    color: $copy;
+    padding: 3vw;
 }
 
 .content > section {
     margin-bottom: 3rem;
 }
 
+.content figure {
+    margin: 2rem 0;
+}
+
 
 // =====================================================================
+// Project Pages
+// =====================================================================
+
 // Awardstack
-// =====================================================================
-
 main.project-page.awardstack .intro {
-
     background-image: url("/img/awardstack_intro.png");
+}
+
+// Simple Scales
+main.project-page.simple-scales .intro {
+    background-image: url("/img/simple-scales_intro.png");
+}
+
+// Neutron
+main.project-page.neutron .intro {
+    background-image: url("/img/neutron_intro.png");
 }
