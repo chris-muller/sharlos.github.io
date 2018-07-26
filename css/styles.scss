@@ -136,6 +136,10 @@ html {
     top: 0;
 }
 
+.site-header .social-container {
+    margin-left: auto;
+}
+
 .site-title {
     margin: 0;
     padding: 6px 2px;
@@ -223,6 +227,10 @@ figcaption {
 
 
 // Social icons
+.social-container {
+    display: flex;
+    justify-content: end;
+}
 .social-link {
     display: block;
     width: 36px;
