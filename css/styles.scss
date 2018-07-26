@@ -267,21 +267,24 @@ figcaption {
 .project-logo.awardstack {
     background-image: url("/img/awardstack/icon.svg");
 }
-.project:hover .project-logo.awardstack {
+.project:hover .project-logo.awardstack,
+body.awardstack .site-footer .project-logo.awardstack {
     background-image: url("/img/awardstack/icon_color.svg");
 }
 
 .project-logo.simple-scales {
     background-image: url("/img/simple-scales/icon.svg");
 }
-.project:hover .project-logo.simple-scales {
+.project:hover .project-logo.simple-scales,
+body.simple-scales .site-footer .project-logo.simple-scales {
     background-image: url("/img/simple-scales/icon_color.svg");
 }
 
 .project-logo.neutron {
     background-image: url("/img/neutron/icon.svg");
 }
-.project:hover .project-logo.neutron {
+.project:hover .project-logo.neutron,
+body.neutron .site-footer .project-logo.neutron {
     background-image: url("/img/neutron/icon_color.svg");
 }
 
@@ -362,12 +365,12 @@ main.project-page .intro {
 // =====================================================================
 
 // Awardstack
-main.project-page.awardstack .intro {
+body.awardstack .project-page .intro {
     background-image: url("/img/awardstack/intro.png");
 }
 
 // Simple Scales
-main.project-page.simple-scales .intro {
+body.simple-scales .project-page .intro {
     background-image: url("/img/simple-scales/intro.png");
 }
 
@@ -377,6 +380,6 @@ main.project-page.simple-scales .intro {
 }
 
 // Neutron
-main.project-page.neutron .intro {
+body.neutron .project-page .intro {
     background-image: url("/img/neutron/intro.png");
 }
