@@ -36,9 +36,9 @@ html {
     @media (min-width: 300px) {
         font-size: calc(10px + 0.5vh + 0.5vw);
     }
-
-
-
+    
+    
+    
     
 }
 
@@ -47,7 +47,8 @@ html {
     color: $primary;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
-    margin: 0.5rem 0;
+    margin: 0;
+    padding: 0.5rem 0;
     text-transform: uppercase;
     line-height: 1;
 }
@@ -96,22 +97,21 @@ p + p {
 // =====================================================================
 // Global Layout
 // =====================================================================
+* {
+    box-sizing: border-box;
+}
+
 html {
     background: $background;
     height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     height: 100%;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
 
 .frame-element {
     background: rgba(0,0,0,0.2);
@@ -128,10 +128,6 @@ main {
 .site-header {
     position: absolute;
     top: 0;
-}
-
-.home-footer {
-    margin-top: auto;
 }
 
 .site-title {
@@ -167,12 +163,12 @@ main {
     padding: 4px;
     height: 100%;
     box-sizing: border-box;
-
+    
     @media (min-width: $mobile) {
         padding: 12px;
     }    
-
-
+    
+    
 }
 
 .logo img {
@@ -193,7 +189,7 @@ main {
     
     font-weight: lighter;
     font-size: 0.8rem;
-
+    
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     transition: background-color 0.25s ease, color 0.25s ease;
 }
@@ -225,6 +221,40 @@ figcaption {
     text-align: center;
 }
 
+
+// Social icons
+
+.social-link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 7px 2px;
+    
+    background-size: 25px 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    line-height: 0; 
+    font-size: 0;
+    color: transparent; 
+
+    transition: background-image 0.2s ease-in-out;
+    
+}
+
+.social-link.github {
+    background-image: url("/img/icon-github.svg");
+}
+.social-link.github:hover {
+    background-image: url("/img/icon-github_color.svg");
+}
+
+.social-link.medium {
+    background-image: url("/img/icon-medium.svg");
+}
+.social-link.medium:hover {
+    background-image: url("/img/icon-medium_color.svg");
+}
 
 // =====================================================================
 // Projects
@@ -308,7 +338,7 @@ body.neutron .site-footer .project-logo.neutron {
 // Home
 // =====================================================================
 .home-header {
-    margin: 3rem;
+    padding: 3rem;
     text-align: center;
 }
 
@@ -319,8 +349,23 @@ body.neutron .site-footer .project-logo.neutron {
 body.home {
     background: url("/img/home_bg.png");
     background-size: cover;
-  }
+    background-position: center center;
+}
 
+
+.home-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0.6rem;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+body.home main {
+    // display: flex;
+    // flex-direction: column;
+    // height: 100%;
+}
 
 // =====================================================================
 // Project Page
