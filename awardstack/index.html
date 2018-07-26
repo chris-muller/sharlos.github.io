@@ -13,15 +13,20 @@ title: Awardstack
 <div class="content">
     
     <section>
+        <h2 class="h2">Problem</h2>
+        <p>Indesign Media hosted runs several awards throughout the year for different markets in the Design and Architecture space. When I joined Indesign they were using a basic ruby application that had been cloned several times to serve the different requirements of the various awards and events the company ran. When I joined, no one left in the company had any experience with ruby, or the inner workings of the codebase, making any modifications to the code difficult.</p>
+        <p>The differing requirements of the various awards led to a situation where the development team was maintaining several slightly different versions of the same old codebase, with inconsistent bugs and functionality between them.</p>
+    </section>
+    
+    <section>
         <h2 class="h2">Process</h2>
-        <p>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a modi ipsam tempora, id iste adipisci iusto quae cumque praesentium sed perferendis corporis possimus eius impedit. Sapiente cumque culpa voluptatibus.</span>
-            <span>Fuga sunt consectetur dignissimos excepturi perspiciatis dolores minima odit voluptates optio odio, enim delectus quae praesentium consequuntur facere alias expedita architecto magnam ipsa et quaerat repudiandae. Sapiente nisi culpa exercitationem!</span>
-            <span>Earum ab praesentium soluta vero consequatur accusantium ut modi doloribus aperiam, asperiores in illum quibusdam voluptate velit obcaecati neque vitae non ex delectus aut error maxime consectetur! Distinctio, ad ipsum?</span>
-        </p>
-        
+
+        <p>After going through a new event launch with the existing infrastructure, I began drafting the required features for a new platform to cover all internal business requirements while leaving the path open for a future opening of the platform to third parties. All existing providers of competition-management platforms were very expensive and provided many features that Indesign did not need.</p>
+        <p>This draft evolved into a full technical specification detailing the list of features, architecture, recommended technology choices, and planned phases of development. This was shared with the other members of the development team for feedback and then passed on to the management and event stakeholders for approval.</p>
+        <p>With approval, the project began the initial phase of development: getting the project up to the requirements to replace the existing platform in time before the launch of an upcoming event.</p>
+
         <figure class="rounded-figure">
-                <img src="/img/awardstack/process.png" alt="">
+            <img src="/img/awardstack/process.png" alt="">
             <figcaption>Landing page for the Awardstack platform.</figcaption>
         </figure>
     </section>
@@ -29,19 +34,16 @@ title: Awardstack
     
     <section>
         <h2 class="h2">Technology</h2>
-        <p>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a modi ipsam tempora, id iste adipisci iusto quae cumque praesentium sed perferendis corporis possimus eius impedit. Sapiente cumque culpa voluptatibus.</span>
-            <span>Fuga sunt consectetur dignissimos excepturi perspiciatis dolores minima odit voluptates optio odio, enim delectus quae praesentium consequuntur facere alias expedita architecto magnam ipsa et quaerat repudiandae. Sapiente nisi culpa exercitationem!</span>
-            <span>Earum ab praesentium soluta vero consequatur accusantium ut modi doloribus aperiam, asperiores in illum quibusdam voluptate velit obcaecati neque vitae non ex delectus aut error maxime consectetur! Distinctio, ad ipsum?</span>
-        </p>
+
+        <p>Awardstack built using Node.js and the Express framework. Node.js was chosen as it was a popular language with large community support making it easier for the development team to maintain the platform as time went on, was with JavaScript being a language most developers have a basic understanding of. During planning the framework choice was narrowed down to Koa and Express. Express was eventually decided upon due to the longer history of community support, as this platform will be expected to be used many years into the future.</p>
+        <p>PostgreSQL was used as the database, and Redis for session storage to make possible future load-balancing easier. The Knex.js library was used for querying the database and managing database migrations.</p>
+        <p>The complex user interface components use Vue.js to manage the UI state seamlessly for the user.</p>
+        <p>Awardstack is hosted on an Amazon AWS EC2 instance behind an Nginx reverse proxy to more performantly serve static assets and manage the TLS certificates. </p>
         
         <figure class="rounded-figure">
-                <img src="/img/awardstack/technology.png" alt="">
+            <img src="/img/awardstack/technology.png" alt="">
             <figcaption>Competition pricing management section of the Awardstack dashboard.</figcaption>
         </figure>
     </section>
-    
-    
-    
     
 </div>
