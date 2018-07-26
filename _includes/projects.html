@@ -1,17 +1,26 @@
 <section class="projects">
+    {% if page.class != "awardstack" %}
     <a href="/awardstack" class="project">
         <div class="project-logo awardstack"></div>
         <h2 class="h2">Awardstack</h2>
         <p>Built from the ground up to host, manage, and judge events and competitions.</p>
+        <a class="btn show-xs" href="/awardstack">View Awardstack</a>
     </a>
+    {% endif %}
+    {% if page.class != "simple-scales" %}
     <a href="/simple-scales" class="project">
         <div class="project-logo simple-scales"></div>
         <h2 class="h2">Simple Scales</h2>
         <p>A simple way to update your weight using the native HealthKit API.</p>
+        <a class="btn show-xs" href="/simple-scales">View Simple Scales</a>
     </a>
+    {% endif %}
+    {% if page.class != "neutron" %}
     <a href="/neutron" class="project">
         <div class="project-logo neutron"></div>
         <h2 class="h2">Neutron</h2>
         <p>A Sass framework created for making flexible, clear, and semantic layouts.</p>
+        <a class="btn show-xs" href="/neutron">View Neutron</a>
     </a>
+    {% endif %}
 </section>

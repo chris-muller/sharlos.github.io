@@ -40,6 +40,12 @@ $header-height: 50px;
     }
 }
 
+.show-xs {
+    @media (min-width: $xs) {
+        display: none;
+    }
+}
+
 // =====================================================================
 // Typography
 // =====================================================================
@@ -272,6 +278,7 @@ figcaption {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center; 
+    padding-bottom: 3rem;
     
     @media (min-width: $mobile) {
         flex-direction: row;
@@ -280,7 +287,7 @@ figcaption {
 
 .project {
     max-width: 15rem;
-    margin: 3rem;
+    margin: 3rem 3rem 0;
     text-decoration: none;
     
     img {
@@ -308,31 +315,42 @@ figcaption {
     transition: background-image 0.2s ease-in-out;
 }
 
-.project-logo.awardstack {
-    background-image: url("/img/awardstack/icon.svg");
-}
-
-.project:hover .project-logo.awardstack,
-html.awardstack .site-footer .project-logo.awardstack {
+.project .project-logo.awardstack {
     background-image: url("/img/awardstack/icon_color.svg");
 }
 
-.project-logo.simple-scales {
-    background-image: url("/img/simple-scales/icon.svg");
-}
-
-.project:hover .project-logo.simple-scales,
-html.simple-scales .site-footer .project-logo.simple-scales {
+.project .project-logo.simple-scales {
     background-image: url("/img/simple-scales/icon_color.svg");
 }
 
-.project-logo.neutron {
-    background-image: url("/img/neutron/icon.svg");
+.project .project-logo.neutron {
+    background-image: url("/img/neutron/icon_color.svg");
 }
 
-.project:hover .project-logo.neutron,
-html.neutron .site-footer .project-logo.neutron {
-    background-image: url("/img/neutron/icon_color.svg");
+@media (min-width: $mobile) {
+    .project .project-logo.awardstack {
+        background-image: url("/img/awardstack/icon.svg");
+    }
+    
+    .project:hover .project-logo.awardstack {
+        background-image: url("/img/awardstack/icon_color.svg");
+    }
+    
+    .project .project-logo.simple-scales {
+        background-image: url("/img/simple-scales/icon.svg");
+    }
+    
+    .project:hover .project-logo.simple-scales {
+        background-image: url("/img/simple-scales/icon_color.svg");
+    }
+    
+    .project .project-logo.neutron {
+        background-image: url("/img/neutron/icon.svg");
+    }
+    
+    .project:hover .project-logo.neutron {
+        background-image: url("/img/neutron/icon_color.svg");
+    }
 }
 
 
@@ -419,7 +437,7 @@ html.home {
 // Awardstack
 html.awardstack .project-page .intro {
     background: rgb(42,	32,	50);
-
+    
     @media (min-width: $mobile) {
         background-image: url("/img/awardstack/intro.png");
         background-position: top center;
@@ -430,7 +448,7 @@ html.awardstack .project-page .intro {
 // Simple Scales
 html.simple-scales .project-page .intro {
     background: rgb(31,	31,	30);
-
+    
     @media (min-width: $mobile) {
         background-image: url("/img/simple-scales/intro.png");
         background-position: top center;
@@ -451,7 +469,7 @@ html.simple-scales .project-page .intro {
 // Neutron
 html.neutron .project-page .intro {
     background: rgb(38,	40,	46);
-
+    
     @media (min-width: $mobile) {
         background-image: url("/img/neutron/intro.png");
         background-position: top center;
