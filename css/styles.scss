@@ -150,7 +150,7 @@ html {
     a {
         text-decoration: none;
         color: $secondary;
-
+        
         &:hover {
             color: $primary;
         }
@@ -296,48 +296,82 @@ figcaption {
 .project-logo {
     width: 100%;
     height: 180px;
+    position: relative;
     background-repeat: no-repeat;
-    background-size: 180px;
-    background-position: center;
-    transition: background-image 0.2s ease-in-out;
+    background-size: 180px 180px;
+    background-position: center center;
+    // transition: background-image 0.2s ease-in-out;
+    
+    &:before, &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 180px 180px;
+        background-position: center center;
+        transition: opacity 0.5s ease;
+    }
+    
 }
 
-.project .project-logo.awardstack {
+.project-logo.awardstack:before {
     background-image: url("/img/awardstack/icon_color.svg");
+    opacity: 1;
 }
 
-.project .project-logo.simple-scales {
+.project-logo.simple-scales:before {
     background-image: url("/img/simple-scales/icon_color.svg");
+    opacity: 1;
 }
 
-.project .project-logo.neutron {
+.project-logo.neutron:before {
     background-image: url("/img/neutron/icon_color.svg");
+    opacity: 1;
 }
 
 @media (min-width: $mobile) {
-    .project .project-logo.awardstack {
+    .project-logo.awardstack:before {
         background-image: url("/img/awardstack/icon.svg");
+        opacity: 1;
     }
     
-    .project:hover .project-logo.awardstack {
+    .project-logo.awardstack:after {
         background-image: url("/img/awardstack/icon_color.svg");
+        opacity: 0;
     }
     
-    .project .project-logo.simple-scales {
+    .project-logo.simple-scales:before {
         background-image: url("/img/simple-scales/icon.svg");
+        opacity: 1;
     }
     
-    .project:hover .project-logo.simple-scales {
+    .project-logo.simple-scales:after {
         background-image: url("/img/simple-scales/icon_color.svg");
+        opacity: 0;
     }
     
-    .project .project-logo.neutron {
+    .project-logo.neutron:before {
         background-image: url("/img/neutron/icon.svg");
+        opacity: 1;
     }
     
-    .project:hover .project-logo.neutron {
+    .project-logo.neutron:after {
         background-image: url("/img/neutron/icon_color.svg");
+        opacity: 0;
     }
+    
+    .project-logo:hover:before {
+        opacity: 0;
+    }
+    
+    .project-logo:hover:after {
+        opacity: 1;
+    }
+    
 }
 
 
@@ -472,48 +506,48 @@ html.resume {
     body {
         padding-bottom: 3rem;
     }
-
+    
     header > strong {
         display: block;
     }
-
+    
     main > * {
         margin: 1rem 0;
         padding: 1rem;
-
+        
         @media (min-width: $mobile) {
             padding: 1rem 5rem;
         }
-
+        
         @media (min-width: $tablet) {
             padding: 1rem 25vw;
         }
     }
-
+    
     main > section:nth-child(even) {
         background: rgba(105,105,105,0.2)
     }
-
+    
     .view-portfolio {
         display: inline-block;
         margin-top: 1rem;
     }
-
+    
     @media print {
         background: #FFF;
         color: #000;
-
+        
         .view-portfolio {
             display: none;
         }
-
+        
         main > * {
             margin: 0.25cm 0;
             padding: 0.25cm;
         }
         
     }
-
+    
 }
 
 // =====================================================================
