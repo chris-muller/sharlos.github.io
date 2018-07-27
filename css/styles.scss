@@ -118,7 +118,11 @@ html {
     background: rgba(0,0,0,0.2);
     width: 100%;
     height: 50px;
-    display: flex;    
+    display: flex;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-left: calc(0.6rem + env(safe-area-inset-left));
+    padding-right: calc(0.6rem + env(safe-area-inset-right));
 }
 
 .site-header {
@@ -216,6 +220,8 @@ figcaption {
     padding: 2rem;
     margin-top: auto;
     text-align: center;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 
@@ -417,9 +423,10 @@ html.home {
 }
 
 .home-footer {
+    height: auto;
     position: fixed;
     bottom: 0;
-    padding: 0 0.6rem;
+    padding-bottom: calc(env(safe-area-inset-bottom)/2);
     box-sizing: border-box;
     justify-content: flex-end;
 }
@@ -435,6 +442,9 @@ html.home {
     text-align: center;
     
     padding: calc(50px + 1rem) 1rem 1rem;
+
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
     
 }
 
