@@ -7,6 +7,5 @@ url: "http://christophermuller.net" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
-collections:
-  project:
-    output: true
+plugins:
+- jekyll-autoprefixer
