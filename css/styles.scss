@@ -300,7 +300,6 @@ figcaption {
     background-repeat: no-repeat;
     background-size: 180px 180px;
     background-position: center center;
-    // transition: background-image 0.2s ease-in-out;
     
     &:before, &:after {
         position: absolute;
@@ -390,13 +389,10 @@ figcaption {
 
 html.home {
     background: $background;
-    
-    @media (min-width: $mobile) {
-        background: url("/img/home_bg.png"), $background;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }    
+    background: url("/img/home_bg.png"), $background;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .home-footer {
