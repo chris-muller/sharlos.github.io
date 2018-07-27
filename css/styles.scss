@@ -229,30 +229,51 @@ figcaption {
     width: 36px;
     height: 36px;
     margin: 7px 2px;
-    
-    background-size: 25px 25px;
-    background-position: center;
-    background-repeat: no-repeat;
-    
+    position: relative;
     line-height: 0; 
     font-size: 0;
     color: transparent; 
+
+    &:before, &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        display: block;
+        background-size: 25px 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+            transition: opacity 0.5s ease;
+    }
     
-    transition: background-image 0.5s ease;
 }
 
-.social-link.github {
+.social-link.github:before {
     background-image: url("/img/icon-github.svg");
+    opacity: 1;
 }
-.social-link.github:hover {
+.social-link.github:after {
     background-image: url("/img/icon-github_color.svg");
+    opacity: 0;
 }
 
-.social-link.medium {
+.social-link.medium:before {
     background-image: url("/img/icon-medium.svg");
+    opacity: 1;
 }
-.social-link.medium:hover {
+.social-link.medium:after {
     background-image: url("/img/icon-medium_color.svg");
+    opacity: 0;
+}
+
+.social-link:hover:before {
+    opacity: 0;
+}
+
+.social-link:hover:after {
+    opacity: 1;
 }
 
 // =====================================================================
