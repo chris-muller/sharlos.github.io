@@ -559,10 +559,20 @@ html.resume {
         display: inline-block;
         margin-top: 1rem;
     }
-    
+
+    .contact {
+        display: block;
+        color: $copy;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+        
     @media print {
         background: #FFF;
-        color: #000;
+        color: #000 !important;
         
         .view-portfolio {
             display: none;
@@ -574,7 +584,7 @@ html.resume {
         }
         
     }
-    
+
 }
 
 // =====================================================================
